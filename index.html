@@ -11,20 +11,14 @@
             --bg-card: #1e293b;       
             --text-main: #f1f5f9;     
             --text-muted: #94a3b8;    
-            --accent: #38bdf8;        /* Blu brillante per la riscrittura */
-            
-            /* Colori analisi */
+            --accent: #38bdf8;
             --allitt: #fb923c;        
             --metaf: #f87171;         
             --rima: #4ade80;          
             --asso: #facc15;          
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -34,15 +28,9 @@
             padding: 50px 20px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .container { max-width: 900px; margin: 0 auto; }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+        header { text-align: center; margin-bottom: 60px; }
 
         h1 {
             font-size: 2.8rem;
@@ -68,7 +56,6 @@
             font-size: 0.9rem;
         }
 
-        /* Legenda */
         .legend-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -80,11 +67,7 @@
             margin-bottom: 50px;
         }
 
-        .l-item {
-            display: flex;
-            align-items: center;
-            font-size: 0.85rem;
-        }
+        .l-item { display: flex; align-items: center; font-size: 0.85rem; }
 
         .l-key {
             width: 20px;
@@ -93,7 +76,6 @@
             margin-right: 12px;
         }
 
-        /* Box Contenuto */
         .analysis-box {
             background: var(--bg-card);
             padding: 40px 50px;
@@ -105,7 +87,6 @@
             margin-bottom: 60px;
         }
 
-        /* Formattazione Analisi */
         .a { color: var(--allitt); font-weight: 700; background: rgba(251, 146, 60, 0.1); padding: 0 2px; }
         .m { background: rgba(248, 113, 113, 0.15); border-bottom: 2px solid var(--metaf); }
         .r { color: var(--rima); font-weight: 600; }
@@ -120,18 +101,26 @@
             border-left: 1px solid #334155;
         }
 
-        /* Divisore Professionale */
         .separator {
             height: 1px;
             background: linear-gradient(90deg, transparent, #334155, transparent);
             margin: 60px 0;
         }
 
-        /* Stile Riscrittura */
         .rewriting-text {
             color: #cbd5e1;
             font-style: italic;
             line-height: 1.8;
+        }
+
+        /* Stile per il testo evidenziato e sottolineato */
+        .highlight-underline {
+            background-color: rgba(56, 189, 248, 0.18);
+            border-bottom: 2px solid var(--accent);
+            color: #e0f2fe;
+            font-style: italic;
+            display: inline;
+            border-radius: 2px;
         }
 
         .section-tag {
@@ -145,7 +134,6 @@
             display: inline-block;
         }
 
-        /* Stile Sezione Cantante */
         .artist-content {
             display: flex;
             gap: 35px;
@@ -160,11 +148,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
 
-        .artist-text {
-            flex: 1;
-            font-size: 1.1rem;
-            color: var(--text-main);
-        }
+        .artist-text { flex: 1; font-size: 1.1rem; color: var(--text-main); }
 
         @media (max-width: 768px) {
             .analysis-box { padding: 25px; }
@@ -181,6 +165,24 @@
         <p class="subtitle">Laboratorio di Scrittura</p>
         <h1>Progetto Analisi del Testo di Samuele e Adem</h1>
     </header>
+
+    <!-- PLAYER YOUTUBE -->
+    <div style="margin-bottom: 60px;">
+        <span class="section-tag">🎵 ASCOLTA LA CANZONE</span>
+        <h2 style="margin-top: 15px;">Felini – Venerus feat. Marco Castello</h2>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; border: 1px solid #334155; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+            <iframe
+                src="https://www.youtube.com/embed/VhWjgsLDvMY"
+                title="Venerus, Marco Castello – Felini"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="separator"></div>
 
     <!-- SEZIONE 1: ANALISI -->
     <span class="section-tag">ANALISI TESTO ORIGINALE</span>
@@ -224,48 +226,47 @@
     <span class="section-tag">PRODUZIONE CREATIVA</span>
     <h2>Riscrittura del Testo</h2>
 
-    <article class="analysis-box rewriting-text">
-        La prima volta che il mare l’ho incontrato
-        era stampato su un muro, enorme, sopra un palazzo
-        correvo tra i fari per restare vivo
-        mi infilavo nei cofano caldi per ingannare il gelo
+    <article class="analysis-box rewriting-text">La prima <span class="a">v</span>olta che il mare l'ho incontrato
+era stampato su un palazzo <span class="s">vero</span>
+corre<span class="a">v</span>o tra i fari per restare <span class="a">v</span>i<span class="a">v</span>o
+mi infila<span class="a">v</span>o nei cofani caldi per ingannare il <span class="s">gelo</span>
 
-        Ho cicatrici sul muso e sogni spelati
-        per una micia da salotto che non mi ha mai guardato
-        ho stretto mani gentili e mani sporche
-        tra una carezza lenta e uno schiaffo sputato
+Ho cicatrici sul muso e sogni <span class="sim">spelati</span>
+per una micia che non mi ha mai guardato in <span class="s">assoluto</span>
+ho stretto mani gentili e mani sporche
+tra una carezza lenta e uno schiaffo <span class="s">muto</span>
 
-        Mi addormentavano i colori dei semafori
-        il brontolio stanco dei piccioni
-        l’autunno sapeva di vapore che sale dai tombini
-        e la nebbia era il mio modo di volare basso
+Mi addormentavano i colori dei semafori
+il brontolio stanco dei piccioni
+l'autunno sapeva di vapore che sale dai tombini
+e la nebbia era il mio modo di volare basso
 
-        Correvo sul grigio come fosse una gara
-        mi chiedevo che rumore facesse il nulla
-        rubavo cibo all’alba nei mercati
-        guardavo i gelati morire piano al sole
+Correvo sul grigio come fosse una gara
+mi chiedevo che rumore facesse il nulla
+rubavo cibo all'alba nei mercati
+guardavo i gelati morire piano al sole
 
-        Mi coprivo con stracci come fossero piume
-        e il mattino nasceva dalle ciminiere
-        ho avuto poco, sì, ma ho immaginato mondi interi
-        sono un gatto cresciuto tra i palazzi
+Mi coprivo con stracci come fossero piume
+e il mattino nasceva dalle ciminiere
+ho avuto poco, sì, ma ho immaginato mondi interi
+sono un gatto cresciuto tra i palazzi
 
-        Dentro una scatola storta sto al sicuro
-        stringo il mondo tra le zampe come fosse cotone
-        con un salto da ninja assalto una luce che trema
-        sono certo di vincere, alzo le mani… ed è già sparita
+Dentro una scatola storta sto al sicuro
+stringo il mondo tra le zampe come fosse cotone
+con un salto da ninja assalto una luce che trema
+sono certo di vincere, alzo le mani… ed è già sparita
 
-        In bilico su piatti sporchi lecco la notte
-        apro un topo di latta e corro da te
-        tra campi distrutti mi sento immortale
-        sono ricco di niente e non me ne accorgo
+In bilico su piatti sporchi lecco la notte
+apro un topo di latta e corro da te
+tra campi distrutti mi sento immortale
+sono ricco di niente e non me ne accorgo
 
-        E non so per quale magia, io e i miei simili
-        inermi nel mondo, ma pieni di vita
-        abbiamo avuto poco
-        abbiamo sognato tantissimo
-        camminiamo storti nel mondo
-        ma siamo felini 🐾
+E non so per quale magia, io e i miei simili
+inermi nel mondo, ma pieni di vita
+abbiamo avuto poco
+abbiamo sognato tantissimo
+camminiamo storti nel mondo
+ma siamo felini 🐾
     </article>
 
     <div class="separator"></div>
@@ -275,11 +276,8 @@
     <h2>Chi è il cantante</h2>
 
     <article class="analysis-box">
-        <div class="artist-content">
-            <img src="https://www.sentireascoltare.com/wp-content/uploads/2021/02/marco-castello-1-scaled.jpg" alt="Marco Castello" class="artist-image">
-            <div class="artist-text">
-                <p><strong>Marco Castello</strong> è un cantautore e musicista italiano, originario della Sicilia. È noto per uno stile intimo e minimale, che mescola indie, pop e sonorità lo-fi, con testi quotidiani, nostalgici e molto personali. Negli ultimi anni si è fatto notare nella scena indipendente italiana per la sua autenticità e semplicità.</p>
-            </div>
+        <div class="artist-text">
+            <p><strong>Marco Castello</strong> è un cantautore e musicista italiano, originario della Sicilia. È noto per uno stile intimo e minimale, che mescola indie, pop e sonorità lo-fi, con testi quotidiani, nostalgici e molto personali. Negli ultimi anni si è fatto notare nella scena indipendente italiana per la sua autenticità e semplicità.</p>
         </div>
     </article>
 
